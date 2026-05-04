@@ -34,7 +34,6 @@ function AgenticB2BCommercePaymentsPage() {
               width: "6rem",
               height: "6rem",
               marginBottom: "2rem",
-              // marginTop: "100px",
             }}
           />
 

@@ -12,14 +12,15 @@ function BigBlueDentalClaimPage() {
   }
   const resetIframe = () => {
     if (iframeRef.current) {
-      iframeRef.current.src = "https://demo-now.techzone.ibm.com/psl/19v05sc?g=cmkbe9w6o000004k17ww13i27&s=0";
+      iframeRef.current.src =
+        "https://embed.figma.com/proto/U5iE7R5JNT61zFrAEiB5OV/BigBlue-Life-Dental-Demo?node-id=24-390&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A390&embed-host=share&hide-ui=1";
     }
   };
 
   // carousel tracker consts
   const location = useLocation();
   const currentIndex = demos.findIndex(
-    (demo) => demo.path === location.pathname
+    (demo) => demo.path === location.pathname,
   );
   const current = currentIndex + 1;
   const total = demos.length;
@@ -66,7 +67,12 @@ function BigBlueDentalClaimPage() {
         <div id="laptop-border">
           <div id="laptop">
             <div id="page-content">
-              <iframe ref={iframeRef} src="https://demo-now.techzone.ibm.com/psl/19v05sc?g=cmkbe9w6o000004k17ww13i27&s=0" />
+              {/* <iframe ref={iframeRef} src={'https://www.figma.com/embed?embed_host=share&url=${"https://www.figma.com/proto/U5iE7R5JNT61zFrAEiB5OV/BigBlue-Life-Dental-Demo?node-id=24-390&p=f&t=fqgJh1FddkmSjqmf-8&scaling=contain&content-scaling=responsive&page-id=0%3A1&starting-point-node-id=24%3A390&hide-ui=1}'}/> */}
+              <iframe
+                ref={iframeRef}
+                src="https://embed.figma.com/proto/U5iE7R5JNT61zFrAEiB5OV/BigBlue-Life-Dental-Demo?node-id=24-390&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A390&embed-host=share&hide-ui=1"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>

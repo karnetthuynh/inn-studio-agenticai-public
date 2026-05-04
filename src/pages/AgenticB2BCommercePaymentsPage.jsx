@@ -29,7 +29,7 @@ function AgenticB2BCommercePaymentsPage() {
         <div className="header">
           {/* icon above header */}
           <img
-            src="/ibm-wxo.svg"
+            src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
             style={{
               width: "6rem",
               height: "6rem",
@@ -126,7 +126,7 @@ function AgenticB2BCommercePaymentsPage() {
         {/* container for the footer with logo */}
         <div id="footer">
           <img
-            src="IBM_logo_black.svg"
+            src={`${import.meta.env.BASE_URL}IBM_logo_black.svg`}
             style={{
               width: "115px",
               height: "3rem",
@@ -142,7 +142,7 @@ function AgenticB2BCommercePaymentsPage() {
             }}
           ></div>
           <img
-            src="gmf-logo.svg"
+            src={`${import.meta.env.BASE_URL}gmf-logo.svg`}
             style={{
               height: "3rem",
               width: "auto",

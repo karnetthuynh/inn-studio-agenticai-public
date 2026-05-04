@@ -32,11 +32,11 @@ function HomePage() {
   const handleToggle = (id) => {
     setOpenItem((prev) => (prev === id ? null : id)); // toggle current
   };
-
+ 
   return (
     <Content>
       {/* header items */}
-      <img id="home-icon" src="/ibm-wxo.svg" />
+      <img id="home-icon" src={`${import.meta.env.BASE_URL}ibm-wxo.svg`} />
       <h1 id="home-title">Reimagine Banking with Agentic AI</h1>
       <h2 id="home-tagline">
         Step into the art of the possible. Discover how AI-powered agents can
@@ -139,7 +139,7 @@ function HomePage() {
       {/* footer with logos */}
       <div id="footer">
         <img
-          src="IBM_logo_black.svg"
+          src={`${import.meta.env.BASE_URL}IBM_logo_black.svg`}
           style={{
             width: "115px",
             height: "3rem",
@@ -155,7 +155,7 @@ function HomePage() {
           }}
         ></div>
         <img
-          src="gmf-logo.svg"
+          src={`${import.meta.env.BASE_URL}gmf-logo.svg`}
           style={{
             height: "3rem",
             width: "auto",

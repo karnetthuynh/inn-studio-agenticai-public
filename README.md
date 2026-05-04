@@ -1,0 +1,1 @@
+This template is a starter to embed demos into the OMA Innovation Studio touchscreen column using a laptop wrapper.

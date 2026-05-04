@@ -6,7 +6,7 @@ import ReactDOM from "react-dom/client";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Karnett-Huynh/inn-studio-gmf-briefing">
       <App />
     </BrowserRouter>
   </React.StrictMode>

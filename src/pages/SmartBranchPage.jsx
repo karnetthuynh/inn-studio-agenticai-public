@@ -142,10 +142,10 @@ function SmartBranchPage() {
             }}
           ></div>
           <img
-            src="FIS_logo.svg"
+            src="gmf-logo.svg"
             style={{
-              width: "115px",
               height: "3rem",
+              width: "auto",
               marginLeft: "2rem",
             }}
           />

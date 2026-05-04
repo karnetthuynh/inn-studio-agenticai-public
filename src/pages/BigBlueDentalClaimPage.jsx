@@ -4,22 +4,23 @@ import { Restart, Home, CaretLeft, CaretRight } from "@carbon/icons-react";
 import { NavLink, useLocation } from "react-router";
 import { demos } from "../App";
 
-function IVRPage() {
+function BigBlueDentalClaimPage() {
   const iframeRef = useRef(null);
 
+  {
+    /* function to reset the iframe to the start of the demo */
+  }
   const resetIframe = () => {
     if (iframeRef.current) {
-      iframeRef.current.src =
-        "https://demo-now.techzone.ibm.com/psl/asj0x8e?g=cmjd4ijvg000704k6akz6hkl0&s=0";
+      iframeRef.current.src = "https://demo-now.techzone.ibm.com/psl/19v05sc?g=cmkbe9w6o000004k17ww13i27&s=0";
     }
   };
 
+  // carousel tracker consts
   const location = useLocation();
-
   const currentIndex = demos.findIndex(
     (demo) => demo.path === location.pathname
   );
-
   const current = currentIndex + 1;
   const total = demos.length;
 
@@ -27,19 +28,18 @@ function IVRPage() {
     <>
       <Content id="demo-content">
         <div className="header">
-          {/* icon above header */}
+          {/* icon abover header */}
           <img
-            src="/ibm-wxo.svg"
+            src="ibm-wxo.svg"
             style={{
               width: "6rem",
               height: "6rem",
               marginBottom: "2rem",
-              // marginTop: "100px",
             }}
           />
 
-          {/* header */}
           <div id="demo-text">
+            {/* Demo Title */}
             <h1
               id="intro"
               style={{
@@ -47,32 +47,26 @@ function IVRPage() {
                 marginBottom: "4rem",
               }}
             >
-              Interactive Voice Response (IVR)
+              BigBlue Dental Claim
             </h1>
-            {/* caption */}
             <div className="caption">
+              {/* Demo Description */}
               <h1
                 style={{
                   fontStyle: "italic",
                   fontSize: "2.5rem",
                 }}
               >
-                Built on the watsonx Orchestrate platform, this IVR agent
-                intelligently analyzes each caller’s request to infer intent and
-                route the financial advisors to the right support team based on
-                Business Unit and Sub‑Business Unit.
+                Learn about AI capabilities in identifying claims fraud.
               </h1>
             </div>
           </div>
         </div>
-        {/* laptop frame */}
+        {/* the laptop frame to embed your demo link into */}
         <div id="laptop-border">
           <div id="laptop">
             <div id="page-content">
-              <iframe
-                ref={iframeRef}
-                src="https://demo-now.techzone.ibm.com/psl/asj0x8e"
-              />
+              <iframe ref={iframeRef} src="https://demo-now.techzone.ibm.com/psl/19v05sc?g=cmkbe9w6o000004k17ww13i27&s=0" />
             </div>
           </div>
         </div>
@@ -104,7 +98,6 @@ function IVRPage() {
               hasIconOnly
               href="#"
               as={NavLink}
-              // to="/loanapproval"
               to={demos[currentIndex - 1]?.path || demos[total - 1].path}
               renderIcon={CaretLeft}
               size={"xl"}
@@ -117,16 +110,14 @@ function IVRPage() {
               hasIconOnly
               href="#"
               as={NavLink}
-              // to="/saferpayments"
               to={demos[currentIndex + 1]?.path || demos[0].path}
               renderIcon={CaretRight}
               size={"xl"}
-              // style={{ marginLeft: "2rem" }}
             />
           </div>
         </div>{" "}
         {/* end buttons */}
-        {/* container for the footer with logo */}
+        {/* footer with logos */}
         <div id="footer">
           <img
             src="IBM_logo_black.svg"
@@ -145,17 +136,18 @@ function IVRPage() {
             }}
           ></div>
           <img
-            src="FIS_logo.svg"
+            src="gmf-logo.svg"
             style={{
-              width: "115px",
               height: "3rem",
+              width: "auto",
               marginLeft: "2rem",
             }}
           />
-        </div>
+        </div>{" "}
+        {/* end footer */}
       </Content>
     </>
   );
 }
 
-export default IVRPage;
+export default BigBlueDentalClaimPage;

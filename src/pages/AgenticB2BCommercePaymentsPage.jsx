@@ -4,23 +4,22 @@ import { Restart, Home, CaretLeft, CaretRight } from "@carbon/icons-react";
 import { NavLink, useLocation } from "react-router";
 import { demos } from "../App";
 
-function SaferPaymentsPage() {
+function AgenticB2BCommercePaymentsPage() {
   const iframeRef = useRef(null);
 
-  {
-    /* function to reset the iframe to the start of the demo */
-  }
   const resetIframe = () => {
     if (iframeRef.current) {
-      iframeRef.current.src = "https://demo-now.techzone.ibm.com/psl/19v05sc?g=cmkbe9w6o000004k17ww13i27&s=0";
+      iframeRef.current.src =
+        "https://demo-now.techzone.ibm.com/psl/g7h0lmj?g=cmg5op1am000404jvdp79h1e8&s=0";
     }
   };
 
-  // carousel tracker consts
   const location = useLocation();
+
   const currentIndex = demos.findIndex(
-    (demo) => demo.path === location.pathname
+    (demo) => demo.path === location.pathname,
   );
+
   const current = currentIndex + 1;
   const total = demos.length;
 
@@ -28,18 +27,19 @@ function SaferPaymentsPage() {
     <>
       <Content id="demo-content">
         <div className="header">
-          {/* icon abover header */}
+          {/* icon above header */}
           <img
-            src="ibm-wxo.svg"
+            src="/ibm-wxo.svg"
             style={{
               width: "6rem",
               height: "6rem",
               marginBottom: "2rem",
+              // marginTop: "100px",
             }}
           />
 
+          {/* header */}
           <div id="demo-text">
-            {/* Demo Title */}
             <h1
               id="intro"
               style={{
@@ -47,29 +47,32 @@ function SaferPaymentsPage() {
                 marginBottom: "4rem",
               }}
             >
-              IBM Safer Payments
+              Agentic B2B Commerce and Payments
             </h1>
+            {/* caption */}
             <div className="caption">
-              {/* Demo Description */}
               <h1
                 style={{
                   fontStyle: "italic",
                   fontSize: "2.5rem",
                 }}
               >
-                Stop scams before they happen with an AI fraud‑detection agent
-                powered by IBM Safer Payments. It intercepts emerging threats in
-                real time and automates investigations to protect customers
-                faster.
+                Learn about watsonx Orchestrate's orchestrator engine, the
+                flexibility of pre-built catalog agents, and agentic AI's
+                potential to enable efficient, transparent, and intelligent
+                commerce.
               </h1>
             </div>
           </div>
         </div>
-        {/* the laptop frame to embed your demo link into */}
+        {/* laptop frame */}
         <div id="laptop-border">
           <div id="laptop">
             <div id="page-content">
-              <iframe ref={iframeRef} src="https://demo-now.techzone.ibm.com/psl/19v05sc?g=cmkbe9w6o000004k17ww13i27&s=0" />
+              <iframe
+                ref={iframeRef}
+                src="https://demo-now.techzone.ibm.com/psl/g7h0lmj"
+              />
             </div>
           </div>
         </div>
@@ -120,7 +123,7 @@ function SaferPaymentsPage() {
           </div>
         </div>{" "}
         {/* end buttons */}
-        {/* footer with logos */}
+        {/* container for the footer with logo */}
         <div id="footer">
           <img
             src="IBM_logo_black.svg"
@@ -139,18 +142,17 @@ function SaferPaymentsPage() {
             }}
           ></div>
           <img
-            src="FIS_logo.svg"
+            src="gmf-logo.svg"
             style={{
-              width: "115px",
               height: "3rem",
+              width: "auto",
               marginLeft: "2rem",
             }}
           />
-        </div>{" "}
-        {/* end footer */}
+        </div>
       </Content>
     </>
   );
 }
 
-export default SaferPaymentsPage;
+export default AgenticB2BCommercePaymentsPage;

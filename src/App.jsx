@@ -3,20 +3,24 @@ import "./App.scss";
 import { Content, Accordion, AccordionItem, Button } from "@carbon/react";
 import { ArrowRight } from "@carbon/icons-react";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 import ClientZeroPage from "./pages/ClientZeroPage";
-import IVRPage from "./pages/IVRPage";
-import LoanAgentPage from "./pages/LoanAgentPage";
-import SaferPaymentsPage from "./pages/SaferPaymentsPage";
+import AgenticB2BCommercePaymentsPage from "./pages/AgenticB2BCommercePaymentsPage";
+import BigBlueDentalClaimPage from "./pages/BigBlueDentalClaimPage";
 import SmartBranchPage from "./pages/SmartBranchPage";
 
 export const demos = [
-  { path: "/ivr", label: "IVR" },
-  { path: "/saferpayments", label: "IBM Safer Payments" },
-  { path: "/clientzero", label: "IBM as Client Zero" },
-  { path: "/smartbranch", label: "Smart Branch" },
-  { path: "/loanapproval", label: "Loan Approval" },
+  {
+    path: "/clientzero",
+    label: "Client Zero: watsonx Orchestrate AI Agent Chat",
+  },
+  { path: "/smartbranch", label: "Smart Branch Quick Assist" },
+  {
+    path: "/agentic-b2b-commerce-payments",
+    label: "Agentic B2B Commerce and Payments",
+  },
+  { path: "/bigbluedentalclaim", label: "BigBlue Internal Dental Claim" },
 ];
 
 function HomePage() {
@@ -45,52 +49,9 @@ function HomePage() {
       {/* accordion component */}
       <Accordion className="my-accordion">
         <AccordionItem
-          title="Interactive Voice Response (IVR)"
+          title="Client Zero: watsonx Orchestrate AI Agent Chat"
           open={openItem === 1}
           onHeadingClick={() => handleToggle(1)}
-        >
-          <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-            Built on the watsonx Orchestrate platform, this Interactive Voice
-            Response (IVR) agent intelligently analyzes each caller’s request to
-            infer intent and route financial advisors to the right support team
-            based on Business Unit and Sub‑Business Unit.
-          </p>
-          <a href="/ivr" className="text-link-cta">
-            Click to explore this demo
-            <ArrowRight
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginLeft: "1rem",
-              }}
-            />
-          </a>
-        </AccordionItem>
-        <AccordionItem
-          title="IBM Safer Payments"
-          open={openItem === 2}
-          onHeadingClick={() => handleToggle(2)}
-        >
-          <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-            Stop scams before they happen with an AI fraud‑detection agent
-            powered by IBM Safer Payments. It intercepts emerging threats in
-            real time and automates investigations to protect customers faster.
-          </p>
-          <a href="/saferpayments" className="text-link-cta">
-            Click to explore this demo
-            <ArrowRight
-              style={{
-                width: "1.25rem",
-                height: "1.25rem",
-                marginLeft: "1rem",
-              }}
-            />
-          </a>
-        </AccordionItem>
-        <AccordionItem
-          title="IBM as Client Zero"
-          open={openItem === 3}
-          onHeadingClick={() => handleToggle(3)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
             AskIBM, an orchestrator assistant, helps employees manage HR, IT,
@@ -100,7 +61,7 @@ function HomePage() {
             tools for secure, personalized answers. Employees stay in control
             with human‑in‑the‑loop approvals and feedback.
           </p>
-          <a href="/clientzero" className="text-link-cta">
+          <Link to="/clientzero" className="text-link-cta">
             Click to explore this demo
             <ArrowRight
               style={{
@@ -109,12 +70,12 @@ function HomePage() {
                 marginLeft: "1rem",
               }}
             />
-          </a>
+          </Link>
         </AccordionItem>
         <AccordionItem
           title="Smart Branch Quick Assist"
-          open={openItem === 4}
-          onHeadingClick={() => handleToggle(4)}
+          open={openItem === 2}
+          onHeadingClick={() => handleToggle(2)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
             By combining Agentic AI, natural language understanding, and
@@ -123,7 +84,7 @@ function HomePage() {
             deeper engagement--all while preparing their operations for the
             future of AI-driven banking.
           </p>
-          <a href="/smartbranch" className="text-link-cta">
+          <Link to="/smartbranch" className="text-link-cta">
             Click to explore this demo
             <ArrowRight
               style={{
@@ -132,21 +93,19 @@ function HomePage() {
                 marginLeft: "1rem",
               }}
             />
-          </a>
+          </Link>
         </AccordionItem>
         <AccordionItem
-          title="Loan Approval"
-          open={openItem === 5}
-          onHeadingClick={() => handleToggle(5)}
+          title="Agentic B2B Commerce and Payments"
+          open={openItem === 3}
+          onHeadingClick={() => handleToggle(3)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-            Powered by IBM Decision Intelligence, this AI agent combines
-            advanced reasoning with deterministic decision-making to ensure
-            consistent, trusted outcomes. The result is a smarter, more reliable
-            workflow where approvals, rejections, and fraud checks are never
-            left to chance.
+            Learn about watsonx Orchestrate's orchestrator engine, the
+            flexibility of pre-built catalog agents, and agentic AI's potential
+            to enable efficient, transparent, and intelligent commerce.
           </p>
-          <a href="/loanapproval" className="text-link-cta">
+          <Link to="/agentic-b2b-commerce-payments" className="text-link-cta">
             Click to explore this demo
             <ArrowRight
               style={{
@@ -155,10 +114,28 @@ function HomePage() {
                 marginLeft: "1rem",
               }}
             />
-          </a>
+          </Link>
+        </AccordionItem>
+        <AccordionItem
+          title="BigBlue Internal Dental Claims"
+          open={openItem === 4}
+          onHeadingClick={() => handleToggle(4)}
+        >
+          <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+            Learn about AI capabilities in identifying claims fraud.
+          </p>
+          <Link to="/bigbluedentalclaim" className="text-link-cta">
+            Click to explore this demo
+            <ArrowRight
+              style={{
+                width: "1.25rem",
+                height: "1.25rem",
+                marginLeft: "1rem",
+              }}
+            />
+          </Link>
         </AccordionItem>
       </Accordion>
-
       {/* footer with logos */}
       <div id="footer">
         <img
@@ -178,10 +155,10 @@ function HomePage() {
           }}
         ></div>
         <img
-          src="FIS_logo.svg"
+          src="gmf-logo.svg"
           style={{
-            width: "115px",
             height: "3rem",
+            width: "auto",
             marginLeft: "2rem",
           }}
         />
@@ -197,10 +174,15 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="/clientzero" element={<ClientZeroPage />} />
-          <Route path="/ivr" element={<IVRPage />} />
-          <Route path="/loanapproval" element={<LoanAgentPage />} />
-          <Route path="/saferpayments" element={<SaferPaymentsPage />} />
           <Route path="/smartbranch" element={<SmartBranchPage />} />
+          <Route
+            path="/agentic-b2b-commerce-payments"
+            element={<AgenticB2BCommercePaymentsPage />}
+          />
+          <Route
+            path="/bigbluedentalclaim"
+            element={<BigBlueDentalClaimPage />}
+          />
         </Routes>
       </Content>
     </>

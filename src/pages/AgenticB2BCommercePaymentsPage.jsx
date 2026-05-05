@@ -10,7 +10,7 @@ function AgenticB2BCommercePaymentsPage() {
   const resetIframe = () => {
     if (iframeRef.current) {
       iframeRef.current.src =
-        "https://demo-now.techzone.ibm.com/psl/g7h0lmj?g=cmg5op1am000404jvdp79h1e8&s=0";
+        "https://demo-now.techzone.ibm.com/psl/02a50fqh?g=cmosz5xzp00a104ifeweo7cms&s=0";
     }
   };
 
@@ -70,7 +70,7 @@ function AgenticB2BCommercePaymentsPage() {
             <div id="page-content">
               <iframe
                 ref={iframeRef}
-                src="https://demo-now.techzone.ibm.com/psl/g7h0lmj"
+                src="https://demo-now.techzone.ibm.com/psl/02a50fqh"
               />
             </div>
           </div>

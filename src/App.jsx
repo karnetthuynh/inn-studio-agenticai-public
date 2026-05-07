@@ -9,6 +9,7 @@ import ClientZeroPage from "./pages/ClientZeroPage";
 import AgenticB2BCommercePaymentsPage from "./pages/AgenticB2BCommercePaymentsPage";
 import BigBlueDentalClaimPage from "./pages/BigBlueDentalClaimPage";
 import SmartBranchPage from "./pages/SmartBranchPage";
+import LoanApprovalPage from "./pages/LoanApprovalPage";
 
 export const demos = [
   {
@@ -21,6 +22,7 @@ export const demos = [
     label: "Agentic B2B Commerce and Payments",
   },
   { path: "/bigbluedentalclaim", label: "BigBlue Internal Dental Claim" },
+  { path: "/loanapproval", label: "Loan Approval" },
 ];
 
 function HomePage() {
@@ -32,7 +34,7 @@ function HomePage() {
   const handleToggle = (id) => {
     setOpenItem((prev) => (prev === id ? null : id)); // toggle current
   };
- 
+
   return (
     <Content>
       {/* header items */}
@@ -122,7 +124,32 @@ function HomePage() {
           onHeadingClick={() => handleToggle(4)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-            Learn about AI capabilities in identifying claims fraud.
+            This AI-powered insurance demo shows a customer submitting a
+            potentially fraudulent dental claim via chatbot, while backend AI
+            detects discrepancies, verifies with the provider, and helps a human
+            adjuster deny the inflated claim.
+          </p>
+          <Link to="/bigbluedentalclaim" className="text-link-cta">
+            Click to explore this demo
+            <ArrowRight
+              style={{
+                width: "1.25rem",
+                height: "1.25rem",
+                marginLeft: "1rem",
+              }}
+            />
+          </Link>
+        </AccordionItem>
+        <AccordionItem
+          title="Loan Approval"
+          open={openItem === 5}
+          onHeadingClick={() => handleToggle(5)}
+        >
+          <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
+            Powered by IBM Decision Intelligence, this AI loan-approval agent
+            automates complex evaluations to deliver fast, trustworthy
+            approvals. The result is a smarter, more efficient lending journey
+            for both customers and financial institutions.
           </p>
           <Link to="/bigbluedentalclaim" className="text-link-cta">
             Click to explore this demo
@@ -183,6 +210,7 @@ function App() {
             path="/bigbluedentalclaim"
             element={<BigBlueDentalClaimPage />}
           />
+          <Route path="/loanapproval" element={<LoanApprovalPage />} />
         </Routes>
       </Content>
     </>

@@ -4,7 +4,7 @@ import { Restart, Home, CaretLeft, CaretRight } from "@carbon/icons-react";
 import { NavLink, useLocation } from "react-router";
 import { demos } from "../App";
 
-function BigBlueDentalClaimPage() {
+function LoanApprovalPage() {
   const iframeRef = useRef(null);
 
   {
@@ -13,8 +13,7 @@ function BigBlueDentalClaimPage() {
   const resetIframe = () => {
     if (iframeRef.current) {
       iframeRef.current.src =
-        "https://demo-now.techzone.ibm.com/psl/x0280s03?g=cmot2d5is002804l4ghil2ctt&s=0";
-      // "https://embed.figma.com/proto/U5iE7R5JNT61zFrAEiB5OV/BigBlue-Life-Dental-Demo?node-id=24-390&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A390&embed-host=share&hide-ui=1";
+        "https://demo-now.techzone.ibm.com/psl/eko05xf?g=cmkpo45x6008x04l14esk28x8&s=0";
     }
   };
 
@@ -30,7 +29,6 @@ function BigBlueDentalClaimPage() {
     <>
       <Content id="demo-content">
         <div className="header">
-          {/* icon abover header */}
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
             style={{
@@ -39,9 +37,7 @@ function BigBlueDentalClaimPage() {
               marginBottom: "2rem",
             }}
           />
-
           <div id="demo-text">
-            {/* Demo Title */}
             <h1
               id="intro"
               style={{
@@ -49,37 +45,33 @@ function BigBlueDentalClaimPage() {
                 marginBottom: "4rem",
               }}
             >
-              BigBlue Dental Claim
+              Loan Approval
             </h1>
+            {/* caption */}
             <div className="caption">
-              {/* Demo Description */}
               <h1
                 style={{
                   fontStyle: "italic",
-                  fontSize: "2.5rem",
+                  fontSize: "2.25rem",
                 }}
               >
-                This AI-powered insurance demo shows a customer submitting a
-                potentially fraudulent dental claim via chatbot, while backend
-                AI detects discrepancies, verifies with the provider, and helps
-                a human adjuster deny the inflated claim.
+                Powered by IBM Decision Intelligence, this AI loan-approval
+                agent automates complex evaluations to deliver fast, trustworthy
+                approvals. The result is a smarter, more efficient lending
+                journey for both customers and financial institutions.
               </h1>
             </div>
           </div>
         </div>
-        {/* the laptop frame to embed your demo link into */}
+        {/* end header */}
+        {/* laptop frame */}
         <div id="laptop-border">
           <div id="laptop">
             <div id="page-content">
               <iframe
                 ref={iframeRef}
-                src="https://demo-now.techzone.ibm.com/psl/x0280s03"
+                src="https://demo-now.techzone.ibm.com/psl/eko05xf?g=cmkpo45x6008x04l14esk28x8&s=0"
               />
-              {/* <iframe
-                ref={iframeRef}
-                src="https://embed.figma.com/proto/U5iE7R5JNT61zFrAEiB5OV/BigBlue-Life-Dental-Demo?node-id=24-390&p=f&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=24%3A390&embed-host=share&hide-ui=1"
-                allowfullscreen
-              ></iframe> */}
             </div>
           </div>
         </div>
@@ -130,7 +122,7 @@ function BigBlueDentalClaimPage() {
           </div>
         </div>{" "}
         {/* end buttons */}
-        {/* footer with logos */}
+        {/* footer */}
         <div id="footer">
           <img
             src={`${import.meta.env.BASE_URL}IBM_logo_black.svg`}
@@ -163,4 +155,4 @@ function BigBlueDentalClaimPage() {
   );
 }
 
-export default BigBlueDentalClaimPage;
+export default LoanApprovalPage;

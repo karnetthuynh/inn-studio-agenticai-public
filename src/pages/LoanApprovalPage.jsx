@@ -28,7 +28,7 @@ function LoanApprovalPage() {
   return (
     <>
       <Content id="demo-content">
-        <div className="header">
+        <div className="header" style={{ marginTop: "-3rem" }}>
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
             style={{

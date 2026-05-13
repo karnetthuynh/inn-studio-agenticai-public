@@ -29,7 +29,7 @@ function BigBlueDentalClaimPage() {
   return (
     <>
       <Content id="demo-content">
-        <div className="header">
+        <div className="header" style={{ marginTop: "-3rem" }}>
           {/* icon abover header */}
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}

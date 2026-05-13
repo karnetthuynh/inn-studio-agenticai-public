@@ -26,7 +26,7 @@ function AgenticB2BCommercePaymentsPage() {
   return (
     <>
       <Content id="demo-content">
-        <div className="header">
+        <div className="header" style={{ marginTop: "-3rem" }}>
           {/* icon above header */}
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
@@ -49,7 +49,7 @@ function AgenticB2BCommercePaymentsPage() {
               Agentic B2B Commerce and Payments
             </h1>
             {/* caption */}
-            <div className="caption">
+            <div className="caption" style={{ marginBottom: "0.5rem" }}>
               <h1
                 style={{
                   fontStyle: "italic",

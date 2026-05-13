@@ -29,7 +29,7 @@ function ClientZeroPage() {
   return (
     <>
       <Content id="demo-content">
-        <div className="header">
+        <div className="header" style={{ marginTop: "-3rem" }}>
           {/* icon above header */}
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}

@@ -49,7 +49,7 @@ function BigBlueDentalClaimPage() {
                 marginBottom: "4rem",
               }}
             >
-              BigBlue Dental Claim
+              BigBlue Life Dental Claim
             </h1>
             <div className="caption">
               {/* Demo Description */}

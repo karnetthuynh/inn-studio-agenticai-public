@@ -119,7 +119,7 @@ function HomePage() {
           </Link>
         </AccordionItem>
         <AccordionItem
-          title="BigBlue Internal Dental Claims"
+          title="BigBlue Life Internal Dental Claims"
           open={openItem === 4}
           onHeadingClick={() => handleToggle(4)}
         >

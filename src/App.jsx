@@ -151,7 +151,7 @@ function HomePage() {
             approvals. The result is a smarter, more efficient lending journey
             for both customers and financial institutions.
           </p>
-          <Link to="/bigbluedentalclaim" className="text-link-cta">
+          <Link to="/loanapproval" className="text-link-cta">
             Click to explore this demo
             <ArrowRight
               style={{

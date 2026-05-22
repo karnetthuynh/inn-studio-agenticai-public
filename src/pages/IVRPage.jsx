@@ -4,13 +4,13 @@ import { Restart, Home, CaretLeft, CaretRight } from "@carbon/icons-react";
 import { NavLink, useLocation } from "react-router";
 import { demos } from "../App";
 
-function AgenticB2BCommercePaymentsPage() {
+function IVRPage() {
   const iframeRef = useRef(null);
 
   const resetIframe = () => {
     if (iframeRef.current) {
       iframeRef.current.src =
-        "https://demo-now.techzone.ibm.com/psl/02a50fqh?g=cmosz5xzp00a104ifeweo7cms&s=0";
+        "https://demo-now.techzone.ibm.com/psl/asj0x8e?g=cmjd4ijvg000704k6akz6hkl0&s=0";
     }
   };
 
@@ -46,7 +46,7 @@ function AgenticB2BCommercePaymentsPage() {
                 marginBottom: "4rem",
               }}
             >
-              Agentic B2B Commerce and Payments
+              Interactive Voice Response (IVR)
             </h1>
             {/* caption */}
             <div className="caption" style={{ marginBottom: "0.5rem" }}>
@@ -56,10 +56,10 @@ function AgenticB2BCommercePaymentsPage() {
                   fontSize: "2.5rem",
                 }}
               >
-                Learn about watsonx Orchestrate's orchestrator engine, the
-                flexibility of pre-built catalog agents, and agentic AI's
-                potential to enable efficient, transparent, and intelligent
-                commerce.
+                Built on the watsonx Orchestrate platform, this IVR agent
+                intelligently analyzes each caller’s request to infer intent and
+                route the financial advisors to the right support team based on
+                Business Unit and Sub‑Business Unit.
               </h1>
             </div>
           </div>
@@ -70,7 +70,7 @@ function AgenticB2BCommercePaymentsPage() {
             <div id="page-content">
               <iframe
                 ref={iframeRef}
-                src="https://demo-now.techzone.ibm.com/psl/02a50fqh"
+                src="https://demo-now.techzone.ibm.com/psl/asj0x8e?g=cmjd4ijvg000704k6akz6hkl0&s=0"
               />
             </div>
           </div>
@@ -154,4 +154,4 @@ function AgenticB2BCommercePaymentsPage() {
   );
 }
 
-export default AgenticB2BCommercePaymentsPage;
+export default IVRPage;

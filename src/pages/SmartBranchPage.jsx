@@ -58,7 +58,7 @@ function SmartBranchPage() {
                 By combining Agentic AI, natural language understanding, and
                 intelligent orchestration, this solution illustrates how banks
                 can increase customer satisfaction, reduce service costs, and
-                drive deeper engagement--all while preparing their operations
+                drive deeper engagement, all while preparing their operations
                 for the future of AI-driven banking.
               </h1>
             </div>

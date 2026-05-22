@@ -6,10 +6,10 @@ import { ArrowRight } from "@carbon/icons-react";
 import { Routes, Route, Link } from "react-router-dom";
 
 import ClientZeroPage from "./pages/ClientZeroPage";
-import AgenticB2BCommercePaymentsPage from "./pages/AgenticB2BCommercePaymentsPage";
-import BigBlueDentalClaimPage from "./pages/BigBlueDentalClaimPage";
+import IVRPage from "./pages/IVRPage";
 import SmartBranchPage from "./pages/SmartBranchPage";
 import LoanApprovalPage from "./pages/LoanApprovalPage";
+import SaferPaymentsPage from "./pages/SaferPaymentsPage";
 
 export const demos = [
   {
@@ -18,10 +18,10 @@ export const demos = [
   },
   { path: "/smartbranch", label: "Smart Branch Quick Assist" },
   {
-    path: "/agentic-b2b-commerce-payments",
-    label: "Agentic B2B Commerce and Payments",
+    path: "/ivr",
+    label: "Interactive Voice Response (IVR)",
   },
-  { path: "/bigbluedentalclaim", label: "BigBlue Internal Dental Claim" },
+  { path: "/saferpayments", label: "IBM Safer Payments" },
   { path: "/loanapproval", label: "Loan Approval" },
 ];
 
@@ -83,7 +83,7 @@ function HomePage() {
             By combining Agentic AI, natural language understanding, and
             intelligent orchestration, this solution illustrates how banks can
             increase customer satisfaction, reduce service costs, and drive
-            deeper engagement--all while preparing their operations for the
+            deeper engagement, all while preparing their operations for the
             future of AI-driven banking.
           </p>
           <Link to="/smartbranch" className="text-link-cta">
@@ -98,16 +98,17 @@ function HomePage() {
           </Link>
         </AccordionItem>
         <AccordionItem
-          title="Agentic B2B Commerce and Payments"
+          title="Interactive Voice Response (IVR)"
           open={openItem === 3}
           onHeadingClick={() => handleToggle(3)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-            Learn about watsonx Orchestrate's orchestrator engine, the
-            flexibility of pre-built catalog agents, and agentic AI's potential
-            to enable efficient, transparent, and intelligent commerce.
+            Built on the watsonx Orchestrate platform, this IVR agent
+            intelligently analyzes each caller’s request to infer intent and
+            route the financial advisors to the right support team based on
+            Business Unit and Sub‑Business Unit.
           </p>
-          <Link to="/agentic-b2b-commerce-payments" className="text-link-cta">
+          <Link to="/ivr" className="text-link-cta">
             Click to explore this demo
             <ArrowRight
               style={{
@@ -119,17 +120,16 @@ function HomePage() {
           </Link>
         </AccordionItem>
         <AccordionItem
-          title="BigBlue Life Internal Dental Claims"
+          title="IBM Safer Payments"
           open={openItem === 4}
           onHeadingClick={() => handleToggle(4)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
-            This AI-powered insurance demo shows a customer submitting a
-            potentially fraudulent dental claim via chatbot, while backend AI
-            detects discrepancies, verifies with the provider, and helps a human
-            adjuster deny the inflated claim.
+            Stop scams before they happen with an AI fraud‑detection agent
+            powered by IBM Safer Payments. It intercepts emerging threats in
+            real time and automates investigations to protect customers faster.
           </p>
-          <Link to="/bigbluedentalclaim" className="text-link-cta">
+          <Link to="/saferpayments" className="text-link-cta">
             Click to explore this demo
             <ArrowRight
               style={{
@@ -202,14 +202,8 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/clientzero" element={<ClientZeroPage />} />
           <Route path="/smartbranch" element={<SmartBranchPage />} />
-          <Route
-            path="/agentic-b2b-commerce-payments"
-            element={<AgenticB2BCommercePaymentsPage />}
-          />
-          <Route
-            path="/bigbluedentalclaim"
-            element={<BigBlueDentalClaimPage />}
-          />
+          <Route path="/ivr" element={<IVRPage />} />
+          <Route path="/saferpayments" element={<SaferPaymentsPage />} />
           <Route path="/loanapproval" element={<LoanApprovalPage />} />
         </Routes>
       </Content>

@@ -170,7 +170,7 @@ function ClientZeroPage() {
             }}
           ></div>
           <img
-            src={`${import.meta.env.BASE_URL}gmf-logo.svg`}
+            src={`${import.meta.env.BASE_URL}bcflogo.svg`}
             style={{
               height: "3rem",
               width: "auto",

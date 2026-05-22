@@ -74,6 +74,12 @@ function BigBlueDentalClaimPage() {
               <iframe
                 ref={iframeRef}
                 src="https://demo-now.techzone.ibm.com/psl/x0280s03"
+                style={{
+                  transform: "scale(0.69)",
+                  transformOrigin: "0 0",
+                  width: "145%",
+                  height: "145%"
+                }}
               />
               {/* <iframe
                 ref={iframeRef}
@@ -149,7 +155,7 @@ function BigBlueDentalClaimPage() {
             }}
           ></div>
           <img
-            src={`${import.meta.env.BASE_URL}gmf-logo.svg`}
+            src={`${import.meta.env.BASE_URL}bcflogo.svg`}
             style={{
               height: "3rem",
               width: "auto",

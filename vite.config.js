@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base:
     process.env.NODE_ENV === "production"
-      ? "/Karnett-Huynh/inn-studio-gmf-briefing/" // GitHub Pages path
+      ? "/Karnett-Huynh/inn-studio-agenticai/" // GitHub Pages path
       : "/", // Local development path
 });

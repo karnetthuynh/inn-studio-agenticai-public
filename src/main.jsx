@@ -5,7 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const basename = import.meta.env.MODE === 'production'
-  ? '/Karnett-Huynh/inn-studio-gmf-briefing'
+  ? '/Karnett-Huynh/inn-studio-agenticai'
   : '/';
 
 ReactDOM.createRoot(document.getElementById("root")).render(

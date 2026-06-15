@@ -28,7 +28,7 @@ function SmartBranchPage() {
   return (
     <>
       <Content id="demo-content">
-        <div className="header" style={{ marginTop: "-3rem" }}>
+        <div className="header" >
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
             style={{
@@ -42,7 +42,7 @@ function SmartBranchPage() {
               id="intro"
               style={{
                 fontSize: "4rem",
-                marginBottom: "4rem",
+                marginBottom: "2.5rem",
               }}
             >
               Smart Branch: <em>Quick Assist</em>
@@ -128,7 +128,7 @@ function SmartBranchPage() {
           <img
             src={`${import.meta.env.BASE_URL}IBM_logo_black.svg`}
             style={{
-              width: "115px",
+              width: "auto",
               height: "3rem",
               marginRight: "2rem",
             }}
@@ -136,13 +136,13 @@ function SmartBranchPage() {
           <div
             id="line"
             style={{
-              height: "3rem",
+              height: "4rem",
               width: "1px",
               backgroundColor: "black",
             }}
           ></div>
           <img
-            src={`${import.meta.env.BASE_URL}bcflogo.svg`}
+            src={`${import.meta.env.BASE_URL}TD_Bank.svg`}
             style={{
               height: "3rem",
               width: "auto",

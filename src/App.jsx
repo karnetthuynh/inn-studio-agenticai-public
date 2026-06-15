@@ -16,7 +16,7 @@ export const demos = [
     path: "/clientzero",
     label: "Client Zero: watsonx Orchestrate AI Agent Chat",
   },
-  { path: "/smartbranch", label: "Smart Branch Quick Assist" },
+  // { path: "/smartbranch", label: "Smart Branch Quick Assist" },
   {
     path: "/ivr",
     label: "Interactive Voice Response (IVR)",
@@ -74,7 +74,7 @@ function HomePage() {
             />
           </Link>
         </AccordionItem>
-        <AccordionItem
+        {/* <AccordionItem
           title="Smart Branch Quick Assist"
           open={openItem === 2}
           onHeadingClick={() => handleToggle(2)}
@@ -96,11 +96,11 @@ function HomePage() {
               }}
             />
           </Link>
-        </AccordionItem>
+        </AccordionItem> */}
         <AccordionItem
           title="Interactive Voice Response (IVR)"
-          open={openItem === 3}
-          onHeadingClick={() => handleToggle(3)}
+          open={openItem === 2}
+          onHeadingClick={() => handleToggle(2)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
             Built on the watsonx Orchestrate platform, this IVR agent
@@ -121,8 +121,8 @@ function HomePage() {
         </AccordionItem>
         <AccordionItem
           title="IBM Safer Payments"
-          open={openItem === 4}
-          onHeadingClick={() => handleToggle(4)}
+          open={openItem === 3}
+          onHeadingClick={() => handleToggle(3)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
             Stop scams before they happen with an AI fraud‑detection agent
@@ -142,8 +142,8 @@ function HomePage() {
         </AccordionItem>
         <AccordionItem
           title="Loan Approval"
-          open={openItem === 5}
-          onHeadingClick={() => handleToggle(5)}
+          open={openItem === 4}
+          onHeadingClick={() => handleToggle(4)}
         >
           <p style={{ fontSize: "1.25rem", lineHeight: "1.5" }}>
             Powered by IBM Decision Intelligence, this AI loan-approval agent
@@ -168,7 +168,7 @@ function HomePage() {
         <img
           src={`${import.meta.env.BASE_URL}IBM_logo_black.svg`}
           style={{
-            width: "115px",
+            // width: "115px",
             height: "3rem",
             marginRight: "2rem",
           }}
@@ -176,13 +176,13 @@ function HomePage() {
         <div
           id="line"
           style={{
-            height: "3rem",
+            height: "4rem",
             width: "1px",
             backgroundColor: "black",
           }}
         ></div>
         <img
-          src={`${import.meta.env.BASE_URL}bcflogo.svg`}
+          src={`${import.meta.env.BASE_URL}TD_Bank.svg`}
           style={{
             height: "3rem",
             width: "auto",

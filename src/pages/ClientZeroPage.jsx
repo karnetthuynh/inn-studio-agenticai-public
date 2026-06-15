@@ -13,14 +13,14 @@ function ClientZeroPage() {
   const resetIframe = () => {
     if (iframeRef.current) {
       iframeRef.current.src =
-        "https://demo-now.techzone.ibm.com/psl/tti07o5?g=cmhl3igeh000004lgaw6dgw2i&s=0";
+        "https://demo-now.techzone.ibm.com/psl/7m63012x?g=cmnjc5vwx000v04l7b2n8es56&s=0";
     }
   };
 
   const location = useLocation();
 
   const currentIndex = demos.findIndex(
-    (demo) => demo.path === location.pathname
+    (demo) => demo.path === location.pathname,
   );
 
   const current = currentIndex + 1;
@@ -29,7 +29,7 @@ function ClientZeroPage() {
   return (
     <>
       <Content id="demo-content">
-        <div className="header" style={{ marginTop: "-3rem" }}>
+        <div className="header">
           {/* icon above header */}
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
@@ -47,7 +47,7 @@ function ClientZeroPage() {
                 id="intro"
                 style={{
                   fontSize: "4rem",
-                  marginBottom: "4rem",
+                  marginBottom: "2.5rem",
                   marginRight: "1rem",
                 }}
               >
@@ -96,7 +96,7 @@ function ClientZeroPage() {
             <div id="page-content">
               <iframe
                 ref={iframeRef}
-                src="https://demo-now.techzone.ibm.com/psl/tti07o5"
+                src="https://demo-now.techzone.ibm.com/psl/7m63012x?g=cmnjc5vwx000v04l7b2n8es56&s=0"
               />
             </div>
           </div>
@@ -156,7 +156,7 @@ function ClientZeroPage() {
           <img
             src={`${import.meta.env.BASE_URL}IBM_logo_black.svg`}
             style={{
-              width: "115px",
+              width: "auto",
               height: "3rem",
               marginRight: "2rem",
             }}
@@ -164,13 +164,13 @@ function ClientZeroPage() {
           <div
             id="line"
             style={{
-              height: "3rem",
+              height: "4rem",
               width: "1px",
               backgroundColor: "black",
             }}
           ></div>
           <img
-            src={`${import.meta.env.BASE_URL}bcflogo.svg`}
+            src={`${import.meta.env.BASE_URL}TD_Bank.svg`}
             style={{
               height: "3rem",
               width: "auto",

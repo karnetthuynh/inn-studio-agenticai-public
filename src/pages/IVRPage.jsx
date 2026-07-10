@@ -31,7 +31,6 @@ function IVRPage() {
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
             style={{
-              width: "6rem",
               height: "6rem",
               marginBottom: "2rem",
             }}
@@ -44,6 +43,7 @@ function IVRPage() {
               style={{
                 fontSize: "4rem",
                 marginBottom: "2.5rem",
+                color: "#0f62fe"
               }}
             >
               Interactive Voice Response (IVR)
@@ -77,7 +77,7 @@ function IVRPage() {
         </div>
         <div id="laptop-bottom"></div>
         {/* buttons */}
-        <div style={{ display: "flex", marginLeft: "0px" }}>
+        <div style={{ display: "flex", marginLeft: "0px", marginBottom: "4rem" }}>
           <div id="nav-buttons" style={{ flex: "2" }}>
             <Button
               className="my-button"
@@ -141,9 +141,9 @@ function IVRPage() {
             }}
           ></div>
           <img
-            src={`${import.meta.env.BASE_URL}TD_Bank.svg`}
+            src={`${import.meta.env.BASE_URL}EETeamLogo.svg`}
             style={{
-              height: "3rem",
+              height: "4rem",
               width: "auto",
               marginLeft: "2rem",
             }}

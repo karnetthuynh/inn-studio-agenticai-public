@@ -142,9 +142,9 @@ function SmartBranchPage() {
             }}
           ></div>
           <img
-            src={`${import.meta.env.BASE_URL}TD_Bank.svg`}
+            src={`${import.meta.env.BASE_URL}EETeamLogo.svg`}
             style={{
-              height: "3rem",
+              height: "4rem",
               width: "auto",
               marginLeft: "2rem",
             }}

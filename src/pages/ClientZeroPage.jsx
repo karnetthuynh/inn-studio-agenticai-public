@@ -34,7 +34,6 @@ function ClientZeroPage() {
           <img
             src={`${import.meta.env.BASE_URL}ibm-wxo.svg`}
             style={{
-              width: "6rem",
               height: "6rem",
               marginBottom: "2rem",
             }}
@@ -42,13 +41,14 @@ function ClientZeroPage() {
 
           <div id="demo-text">
             {/* header */}
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", color: "#0f62fe" }}>
               <h1
                 id="intro"
                 style={{
                   fontSize: "4rem",
                   marginBottom: "2.5rem",
                   marginRight: "1rem",
+                  color: "#0f62fe",
                 }}
               >
                 IBM as
@@ -60,6 +60,7 @@ function ClientZeroPage() {
                   // fontWeight: "400",
                   fontSize: "4rem",
                   marginRight: "18px",
+                  color: "#0f62fe",
                 }}
               >
                 Client Zero
@@ -97,6 +98,7 @@ function ClientZeroPage() {
               <iframe
                 ref={iframeRef}
                 src="https://demo-now.techzone.ibm.com/psl/7m63012x?g=cmnjc5vwx000v04l7b2n8es56&s=0"
+                style={{ zoom: "58%" }}
               />
             </div>
           </div>
@@ -104,7 +106,9 @@ function ClientZeroPage() {
         <div id="laptop-bottom"></div>
         {/* optional restart button */}
         {/* buttons */}
-        <div style={{ display: "flex", marginLeft: "0px" }}>
+        <div
+          style={{ display: "flex", marginLeft: "0px", marginBottom: "4rem" }}
+        >
           <div id="nav-buttons" style={{ flex: "2" }}>
             <Button
               className="my-button"
@@ -170,9 +174,9 @@ function ClientZeroPage() {
             }}
           ></div>
           <img
-            src={`${import.meta.env.BASE_URL}TD_Bank.svg`}
+            src={`${import.meta.env.BASE_URL}EETeamLogo.svg`}
             style={{
-              height: "3rem",
+              height: "4rem",
               width: "auto",
               marginLeft: "2rem",
             }}
